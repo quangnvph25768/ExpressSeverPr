@@ -1,0 +1,48 @@
+<%- include('../inc/top_inc') %>
+
+
+
+<div id="list">
+    <h1>Edit user</h1>
+      <form method="post">
+        <div class="modal-content">
+            
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Full Name</label>
+                    <input type="text" class="form-control mb-3" id="exampleInputPassword1" name="fullName" value="<%= objUser.fullName %>">
+                </div>
+                
+
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">User name</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="username"  value="<%= objUser.username %>">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="passWd"  value="<%= objUser.passWd %>">
+                 </div>
+                
+               
+                 <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputPassword1" name="email"  value="<%= objUser.email %>">
+                 </div>
+                
+               
+            </div>
+        </div>
+        <div class="modal-footer">  
+              <!-- <button type="button" class=" btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+              <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+<%- include('../inc/bottom_inc') %>
+
+

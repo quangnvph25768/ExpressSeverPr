@@ -1,0 +1,27 @@
+<%- include('../inc/top_inc') %>
+
+
+<%= msg %>
+
+<div id="list">
+    <h1>Sửa Loại</h1>
+    <form method="post">
+      <div class="modal-content">
+          
+          <div class="modal-body">
+              <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Name Category</label>
+                  <input type="text" class="form-control mb-3" value="<%= objSP.name %>" name="name">
+              </div>
+            
+          </div>
+      </div>
+      
+            <button type="submit" class=" btn btn-danger btn-lg" >Delete</button>
+            <button type="submit" class="btn btn-primary btn-lg">Update</button>
+      
+  </form>
+</div>
+
+
+<%- include('../inc/bottom_inc') %>

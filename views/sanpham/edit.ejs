@@ -1,0 +1,60 @@
+<%- include('../inc/top_inc') %>
+
+
+<%= msg %>
+
+<div id="list">
+    <h1>Sửa SP</h1>
+    <form method="post">
+      <div class="modal-content">
+          
+          <div class="modal-body">
+              <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Name product</label>
+                  <input type="text" class="form-control mb-3" value="<%= objSP.name %>" name="name">
+              </div>
+               <!-- <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Ảnh đại diện</label>
+                  <form action="" method="post" enctype="multipart/form-data">
+                      <input type="file" name="file_anh">
+                      <button type="submit">Upload</button>
+                  </form>
+              </div>   -->
+
+
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Price</label>
+                  <input type="number" class="form-control"  value="<%= objSP.price %>" name="price">
+              </div>
+
+              <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Description</label>
+                  <textarea name="description" id="exampleInputPassword1" class="form-control" cols="20"
+                      rows="10"><%= objSP.description %></textarea>
+               </div>
+              
+             
+               <select class="form-select" name="category" >
+                <% listTL.forEach( (row)=>{
+                    let selected = '';
+                    if(  String ( row._id) == String( objSP.id_category)  )
+                        selected = '  selected  ';
+                    %>
+                    <option   <%= selected %>
+                            value="<%= row._id  %>">  <%= row.name  %>  </option>
+        
+                <%   }) %>
+        
+            </select>
+          </div>
+      </div>
+      
+          
+            <button type="submit" class="btn btn-primary btn-lg">Update</button>
+      
+  </form>
+</div>
+
+
+<%- include('../inc/bottom_inc') %>
